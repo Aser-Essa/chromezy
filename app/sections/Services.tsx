@@ -1,0 +1,43 @@
+import Card from "../_components/Card";
+import { ServicesData } from "../_lib/Data";
+import HiddenTopAnimation from "../_components/HiddenTopAnimation";
+import BlurBallAnimation from "../_components/BlurBallAnimation";
+
+function Services() {
+  return (
+    <HiddenTopAnimation distance={[1200, 1750]}>
+      <div
+        className="absolute left-[50%] h-[445px] w-[445px] translate-x-[-50%] blur-[100px]"
+        style={{
+          background:
+            "radial-gradient( circle, #095dff 0%, #bd09ff3e 30%, #bd09ff00 80%)",
+        }}
+      ></div>
+      <div className="relative space-y-12 p-20">
+        <BlurBallAnimation />
+        <div className="space-y-4">
+          <p className="text-[40px] font-semibold">Product Engineering</p>
+          <p className="max-w-[674px] text-[#ffffffcc]">
+            Discover the impact of bespoke digital solutions tailored precisely
+            to your business&apos;s distinct requirements. Our experienced team
+            of professionals ensures you receive outstanding results that
+            consistently exceed your expectations.
+          </p>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fill,_minmax(308px,1fr))] gap-4">
+          {ServicesData?.map((card, idx) => (
+            <Card
+              key={idx}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+              backgroundColor={card.backgroundColor}
+            />
+          ))}
+        </div>
+      </div>
+    </HiddenTopAnimation>
+  );
+}
+
+export default Services;
