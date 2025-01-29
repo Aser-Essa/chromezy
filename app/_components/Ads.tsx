@@ -3,7 +3,7 @@ import Image from "next/image";
 function Ads() {
   return (
     <>
-      <div className="flex h-[392px] flex-col items-center gap-20 px-20 py-20">
+      <div className="flex h-[392px] flex-col items-center gap-20 p-20">
         <div className="relative h-[1px] w-full">
           <Image src={"/Line.png"} fill alt="line" />
         </div>

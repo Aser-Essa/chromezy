@@ -43,6 +43,15 @@ function ScrollBallImage() {
       setHeightDistance([669, 418]);
       setBlurState([0, 10]);
     }
+
+    if (2651 >= e && e >= 1887) {
+      setDistance([1947, 2615]);
+      setTopDistance([1730, 2640]);
+      setRightDistance([97, -17]);
+      setWidthScroll([418, 639]);
+      setHeightDistance([418, 639]);
+      setBlurState([10, 15]);
+    }
   }
   scrollY.on("change", handleScroll);
 

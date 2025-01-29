@@ -43,6 +43,15 @@ function ScrollTriangleImage() {
       setLeftDistance([-45, -115]);
       setBlurState([14, 7]);
     }
+
+    if (2651 >= e && e >= 1887) {
+      setDistance([1947, 2630]);
+      setTopDistance([2200, 2640]);
+      setLeftDistance([-115, -450]);
+      setWidthScroll([434, 816]);
+      setHeightDistance([434, 816]);
+      setBlurState([7, 14]);
+    }
   }
 
   scrollY.on("change", handleScroll);

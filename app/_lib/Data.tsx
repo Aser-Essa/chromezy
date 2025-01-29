@@ -138,3 +138,67 @@ export const ClientsData = [
     ),
   },
 ];
+
+export const SuccessStoriesData = [
+  {
+    title: "FinConnect",
+    description: "Customer Relationship Management (CRM)",
+    image: (
+      <Image
+        src={"/succes story 1.png"}
+        fill
+        alt="succes story"
+        className="object-cover"
+      />
+    ),
+  },
+  {
+    title: "HealthSync",
+    description: "Health Tracking App for Patients and Doctors",
+    image: (
+      <Image
+        src={"/succes story 2.png"}
+        fill
+        alt="succes story"
+        className="object-cover"
+      />
+    ),
+  },
+  {
+    title: "Commerce360",
+    description: "Online Store, Multivendor Marketplace & E-commerce Apps",
+    image: (
+      <Image
+        src={"/succes story 3.png"}
+        fill
+        alt="succes story"
+        className="object-cover"
+      />
+    ),
+  },
+  {
+    title: "PrintwithAI",
+    description:
+      "Web-to-Print Software / Online Design Tool / Product Designer Tool",
+    image: (
+      <Image
+        src={"/succes story 4.png"}
+        fill
+        alt="succes story"
+        className="object-cover"
+      />
+    ),
+  },
+  {
+    title: "PM Insights",
+    description: "Project Management Tool (SaaS & Hosted)",
+    image: (
+      <Image
+        src={"/succes story 5.png"}
+        fill
+        alt="succes story"
+        className="object-cover"
+      />
+    ),
+  },
+];
