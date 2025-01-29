@@ -1,3 +1,4 @@
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import ScrollBallImage from "./_components/ScrollBallImage";
 import ScrollTriangleImage from "./_components/ScrollTriangleImage";
@@ -31,9 +32,10 @@ export default function RootLayout({
         className={`h-full overflow-x-hidden bg-[#151A2C] bg-[url(/background.png)] bg-contain font-sora text-white ${SoraFont.variable} ${InterFont.variable} antialiased`}
       >
         <Header />
-        <ScrollBallImage />
+        {/* <ScrollBallImage />
         <ScrollTriangleImage />
         {children}
+        <Footer /> */}
       </body>
     </html>
   );

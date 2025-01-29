@@ -9,7 +9,7 @@ import Technologies from "./sections/Technologies";
 
 export default function Home() {
   return (
-    <div className="h-[10000vh]">
+    <div>
       <HeroSection />
       <Ads />
       <Services />
