@@ -63,7 +63,7 @@ function Input({ id }: { id: string }) {
           required: "This Field Is Required",
         })}
       />
-      {errors[id] && (
+      {typeof errors[id]?.message === "string" && (
         <p className="text-[10px] text-red-500">{errors[id]?.message}</p>
       )}
     </>
@@ -85,7 +85,7 @@ function TextArea({ id }: { id: string }) {
           required: "This Field Is Required",
         })}
       />
-      {errors[id] && (
+      {typeof errors[id]?.message === "string" && (
         <p className="text-[10px] text-red-500">{errors[id]?.message}</p>
       )}
     </>

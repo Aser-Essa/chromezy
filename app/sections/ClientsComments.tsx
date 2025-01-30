@@ -1,6 +1,4 @@
 "use client";
-import "swiper/css/navigation";
-import "swiper/css";
 import { IoArrowForward } from "react-icons/io5";
 import { IoArrowBack } from "react-icons/io5";
 import ClientComment from "../_components/ClientComment";
@@ -114,39 +112,3 @@ function ClientsComments() {
 }
 
 export default ClientsComments;
-
-// <div dir="rtl">
-// <Swiper
-//   spaceBetween={0}
-//   slidesPerView={3}
-//   modules={[Navigation]}
-//   navigation={{
-//     nextEl: `.nextBtn`,
-//     prevEl: `.prevBtn`,
-//     clickable: true,
-//   }}
-//   wrapperClass="flex "
-// >
-//   <SwiperSlide>
-//     <ClientComment />
-//   </SwiperSlide>
-
-//   <SwiperSlide>
-//     <ClientComment />
-//   </SwiperSlide>
-
-//   <SwiperSlide>
-//     <ClientComment />
-//   </SwiperSlide>
-
-//   <SwiperSlide>
-//     <ClientComment />
-//   </SwiperSlide>
-
-//   {/* <ClientComment />
-// <ClientComment />
-// <ClientComment />
-// <ClientComment />
-// <ClientComment /> */}
-// </Swiper>
-// </div>

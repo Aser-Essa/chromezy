@@ -5,7 +5,7 @@ import Introduction from "../_components/Introduction";
 function HeroSection() {
   return (
     <>
-      <HiddenTopAnimation distance={[0, 650]}>
+      <HiddenTopAnimation distance={[0, 650]} maxScreen={640}>
         <BackgroundHeroSection />
         <Introduction />
       </HiddenTopAnimation>

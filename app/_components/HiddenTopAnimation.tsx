@@ -13,7 +13,7 @@ function HiddenTopAnimation({
   distance,
   maxScreen,
 }: HiddenTopAnimation) {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, distance, [
     1,
@@ -21,6 +21,7 @@ function HiddenTopAnimation({
   ]);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 
     return window.removeEventListener("resize", () =>
