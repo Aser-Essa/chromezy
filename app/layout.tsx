@@ -1,4 +1,4 @@
-import Footer from "./_components/Footer";
+
 import Header from "./_components/Header";
 import ScrollBallImage from "./_components/ScrollBallImage";
 import ScrollTriangleImage from "./_components/ScrollTriangleImage";
