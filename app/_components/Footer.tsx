@@ -34,14 +34,14 @@ export default function Footer() {
               src={"/instagram.png"}
               width={24}
               height={24}
-              alt="facebook"
+              alt="instagram"
             />
 
             <Image
               src={"/linkedin.png"}
               width={24}
               height={24}
-              alt="facebook"
+              alt="linkedin"
             />
           </div>
         </div>

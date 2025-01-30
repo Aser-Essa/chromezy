@@ -57,7 +57,7 @@ function ScrollBallImage() {
 
   return (
     <motion.div
-      className="absolute z-[-1] max-sm:hidden"
+      className="absolute z-[-1] max-lg:hidden"
       style={{ top, right, width, height, filter: `blur(${blur.get()}px)` }}
     >
       <Image

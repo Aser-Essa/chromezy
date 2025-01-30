@@ -3,7 +3,7 @@ import Image from "next/image";
 function Introduction() {
   return (
     <>
-      <div className="relative z-[1000000000000000] mt-[110px] flex min-h-[597px] w-full flex-col items-center gap-12 px-20 text-center">
+      <div className="relative z-[1000] mt-[110px] flex min-h-[597px] w-full flex-col items-center gap-12 px-20 text-center max-md:gap-10 max-md:px-14 max-sm:px-6">
         <div className="flex flex-col items-center gap-3">
           <div className="flex h-[56px] items-center justify-center gap-2.5 py-4">
             <Image
@@ -17,21 +17,21 @@ function Introduction() {
               Introducing AI Automation
             </p>
           </div>
-          <p className="text-center text-[64px] font-semibold">
+          <p className="text-center text-[clamp(36px,6vw,64px)] font-semibold">
             from <span className="text-[#11DEFF]">CONCEPT</span>
             <br /> to <span className="text-[#4380FF]">REALITY</span>
           </p>
-          <p className="text-2xl text-[#BDF4D0]">
+          <p className="text-[clamp(16px,2vw,24px)] text-[#BDF4D0]">
             We Engineer your Software Success & Digital Transformation.
           </p>
         </div>
-        <p className="w-[698px] text-center">
+        <p className="max-w-[698px] text-center text-[clamp(14px,1.7vw,16px)]">
           At Chromezy, we translate your ideas into market-ready solutions
           quickly and precisely. Leveraging the power of technology and
           prioritizing user needs, we deliver products that are both
           cutting-edge and user-centric.
         </p>
-        <div className="flex h-[153px] w-[817px] items-center justify-center gap-[49px] px-[56px] py-10">
+        <div className="grid min-h-[153px] w-full max-w-[817px] grid-cols-[repeat(auto-fill,_minmax(120px,1fr))] items-center justify-center gap-[49px] px-[56px] py-10 max-md:grid-cols-[repeat(auto-fill,_minmax(100px,1fr))] max-md:px-2">
           <div>
             <p className="bg-gradient-to-r from-[#3C6BFE] to-[#9D84F2] bg-clip-text text-[32px] font-semibold text-transparent">
               200%

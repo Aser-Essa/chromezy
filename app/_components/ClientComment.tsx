@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Ref } from "react";
 
 type ClientCommentProps = {
   description: string;
@@ -8,6 +9,7 @@ type ClientCommentProps = {
   project: string;
   country: string;
   image: React.ReactElement;
+  commentRef: Ref<HTMLDivElement> | undefined;
 };
 
 function ClientComment({
@@ -18,11 +20,15 @@ function ClientComment({
   project,
   country,
   image,
+  commentRef,
 }: ClientCommentProps) {
   return (
     <>
       <>
-        <div className="h-[450px] w-[400px] rounded-[20px] bg-[#bdd5f40d] p-6 backdrop-blur-[40px] transition-all duration-200 hover:bg-[#bdd5f433]">
+        <div
+          ref={commentRef}
+          className="h-[450px] w-[clamp(342.4px,47.15vw,400px)] rounded-[20px] bg-[#bdd5f40d] p-6 backdrop-blur-[40px] transition-all duration-200 hover:bg-[#bdd5f433]"
+        >
           <div className="h-8 w-8">
             <Image
               src="/Double Quotation Mark.png"

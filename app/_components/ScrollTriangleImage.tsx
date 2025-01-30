@@ -58,7 +58,7 @@ function ScrollTriangleImage() {
 
   return (
     <motion.div
-      className="absolute z-[-1] mix-blend-plus-lighter max-sm:hidden"
+      className="absolute z-[-1] mix-blend-plus-lighter max-lg:hidden"
       style={{
         top,
         left,

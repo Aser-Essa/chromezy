@@ -25,7 +25,7 @@ export default function TechnologyField({
         </p>
         <div className="space-y-4">
           <p className="text-xl font-semibold leading-[25px]">{title}</p>
-          <div className="flex w-[88%] flex-wrap items-center gap-1">
+          <div className="flex flex-wrap items-center gap-1">
             {technologies.map((el, idx) => (
               <Technology key={idx} image={el.image} text={el.text} />
             ))}

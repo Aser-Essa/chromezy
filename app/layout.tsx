@@ -32,10 +32,10 @@ export default function RootLayout({
         className={`h-full overflow-x-hidden bg-[#151A2C] bg-[url(/background.png)] bg-contain font-sora text-white ${SoraFont.variable} ${InterFont.variable} antialiased`}
       >
         <Header />
-        {/* <ScrollBallImage />
+        <ScrollBallImage />
         <ScrollTriangleImage />
         {children}
-        <Footer /> */}
+        {/* <Footer /> */}
       </body>
     </html>
   );
