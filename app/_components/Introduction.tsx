@@ -1,4 +1,5 @@
 import Image from "next/image";
+import GridText from "./GridText";
 
 function Introduction() {
   return (
@@ -33,27 +34,19 @@ function Introduction() {
         </p>
         <div className="grid min-h-[153px] w-full max-w-[817px] grid-cols-[repeat(auto-fill,_minmax(120px,1fr))] items-center justify-center gap-[49px] px-[56px] py-10 max-md:grid-cols-[repeat(auto-fill,_minmax(100px,1fr))] max-md:px-2">
           <div>
-            <p className="bg-gradient-to-r from-[#3C6BFE] to-[#9D84F2] bg-clip-text text-[32px] font-semibold text-transparent">
-              200%
-            </p>
+            <GridText>200%</GridText>
             <p className="text-sm">Revenue Growth</p>
           </div>
           <div>
-            <p className="bg-gradient-to-r from-[#3C6BFE] to-[#9D84F2] bg-clip-text text-[32px] font-semibold text-transparent">
-              4X
-            </p>
+            <GridText>4X</GridText>
             <p className="text-sm">Speed to Market</p>
           </div>
           <div>
-            <p className="bg-gradient-to-r from-[#3C6BFE] to-[#9D84F2] bg-clip-text text-[32px] font-semibold text-transparent">
-              73%
-            </p>
+            <GridText>73%</GridText>
             <p className="text-sm">New Orders</p>
           </div>
           <div>
-            <p className="bg-gradient-to-r from-[#3C6BFE] to-[#9D84F2] bg-clip-text text-[32px] font-semibold text-transparent">
-              10K+
-            </p>
+            <GridText>10K+</GridText>
             <p className="text-sm">Active Users</p>
           </div>
         </div>

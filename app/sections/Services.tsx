@@ -11,8 +11,6 @@ function Services() {
         style={{
           background:
             "radial-gradient( circle, #095dff 0%, #bd09ff3e 30%, #bd09ff00 80%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
         }}
       ></div>
       <div className="relative space-y-12 p-20 max-md:px-6 max-md:py-10">
