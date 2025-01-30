@@ -12,7 +12,7 @@ export default function Story({ title, description, image }: StoryProps) {
     <>
       <div className="relative h-[304px] overflow-hidden rounded-[20px]">
         {image}
-        <p className="absolute left-[14px] top-4 flex h-6 w-[106px] items-center justify-center text-nowrap rounded-[100px] border border-[#fff] bg-[#ffffffcc] px-3 py-0.5 text-[10px] font-semibold text-[#141517]">
+        <p className="absolute left-[14px] top-4 flex h-6 w-[106px] items-center justify-center text-nowrap rounded-[100px] border border-[#fff] bg-[#ffffffcc] px-3 py-0.5 text-[10px] font-semibold text-[#141517] max-sm:p-0">
           Success Stories
         </p>
         <div className="absolute right-2 top-2 flex h-10 w-10 cursor-pointer items-center justify-center rounded-[100px] bg-[#00000099]">

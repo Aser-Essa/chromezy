@@ -13,7 +13,7 @@ export default function Details() {
             alt="Logo"
             className="max-md:mx-auto"
           />
-          <p className="w-[298px] pl-[46px] text-xs text-[#ffffff99] max-md:p-0 max-md:text-sm">
+          <p className="w-[298px] pl-[46px] text-xs text-[#ffffff99] max-md:p-0 max-md:text-center max-md:text-sm">
             Not just about software & Product development; we&apos;re your tech
             partners, crafting modern digital solutions for next-gen excellence!
           </p>

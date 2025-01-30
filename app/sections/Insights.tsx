@@ -15,7 +15,7 @@ export default function Insights() {
             right spot.
           </p>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill_,minmax(330px,1fr))] gap-[22px]">
+        <div className="grid grid-cols-[repeat(auto-fill_,minmax(330px,1fr))] gap-[22px] max-sm:grid-cols-[repeat(auto-fill_,minmax(300px,1fr))]">
           {InsightsData.map((el, idx) => (
             <InsightCard
               key={idx}

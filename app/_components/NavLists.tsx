@@ -29,7 +29,6 @@ export default function NavLists() {
           <IoIosArrowForward className="h-3 w-3 text-[#26272E]" />
         </li>
       </ul>
-
       <ul className="w-[max(160px,14.65vw)]">
         <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
           <p>AI</p>
