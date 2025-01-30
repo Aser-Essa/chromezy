@@ -3,8 +3,8 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function NavLists() {
   return (
-    <div className="flex h-fit w-[456px] justify-between gap-20 font-inter text-sm text-[#ffffff99]">
-      <ul className="w-[188px]">
+    <div className="flex h-fit w-[456px] justify-between gap-20 font-inter text-sm text-[#ffffff99] max-lg:gap-12 max-md:w-full max-md:justify-center">
+      <ul className="w-[max(160px,14.65vw)]">
         <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
           <p>Home</p>
           <IoIosArrowForward className="h-3 w-3 text-[#26272E]" />
@@ -30,7 +30,7 @@ export default function NavLists() {
         </li>
       </ul>
 
-      <ul className="w-[188px]">
+      <ul className="w-[max(160px,14.65vw)]">
         <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
           <p>AI</p>
           <IoIosArrowForward className="h-3 w-3 text-[#26272E]" />
