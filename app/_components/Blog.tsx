@@ -7,7 +7,7 @@ type StoryProps = {
   image: React.ReactElement;
 };
 
-export default function Story({ title, description, image }: StoryProps) {
+export default function Blog({ title, description, image }: StoryProps) {
   return (
     <div className="relative h-[304px] overflow-hidden rounded-[20px]">
       {image}

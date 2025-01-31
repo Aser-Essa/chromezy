@@ -1,5 +1,5 @@
 import React from "react";
-import Story from "../_components/Story";
+import Blog from "../_components/Blog";
 import GoTopAnimation from "../_components/GoTopAnimation";
 import { BlogsData } from "../_lib/Data";
 import HiddenTopAnimation from "../_components/HiddenTopAnimation";
@@ -15,12 +15,12 @@ export default function Blogs() {
           paragraph={` Dummy ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             vulputate libero et velit interdum, ac aliquet odio mattis.`}
         />
-        {BlogsData?.map((storyData, idx) => (
+        {BlogsData?.map((BlogData, idx) => (
           <GoTopAnimation key={idx} idx={idx} startNumber={2}>
-            <Story
-              title={storyData.title}
-              description={storyData.description}
-              image={storyData.image}
+            <Blog
+              title={BlogData.title}
+              description={BlogData.description}
+              image={BlogData.image}
             />
           </GoTopAnimation>
         ))}
