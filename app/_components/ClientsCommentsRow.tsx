@@ -1,20 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ClientComment from "../_components/ClientComment";
-import { AnimationControls, motion } from "motion/react";
+import { motion } from "motion/react";
 import { ClientsData } from "../_lib/Data";
-
-type ClientsCommentsRowProps = {
-  ref: React.RefObject<HTMLDivElement | null>;
-  commentRef: React.RefObject<HTMLDivElement | null>;
-  controls: AnimationControls;
-};
+import { CommentsController } from "../_Types/ControllerType";
 
 export default function ClientsCommentsRow({
   ref,
   commentRef,
   controls,
-}: ClientsCommentsRowProps) {
+}: CommentsController) {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {

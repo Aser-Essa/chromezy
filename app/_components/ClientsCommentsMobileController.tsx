@@ -1,6 +1,20 @@
+"use client";
 import React from "react";
+import { useScrollBtns } from "../_hooks/useScrollBtns";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import { CommentsController } from "../_Types/ControllerType";
 
-export default function ClientsCommentsMobileController() {
+export default function ClientsCommentsMobileController({
+  ref,
+  commentRef,
+  controls,
+}: CommentsController) {
+  const { handleClickNext, handleClickPrev } = useScrollBtns({
+    ref,
+    commentRef,
+    controls,
+  });
+
   return (
     <>
       <div

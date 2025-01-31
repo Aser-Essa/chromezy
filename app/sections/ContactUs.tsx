@@ -9,7 +9,10 @@ import ContactUsInfo from "../_components/ContactUsInfo";
 export default function ContactUs() {
   return (
     <div className="relative">
-      <VioletLight />
+      <VioletLight
+        className="bottom-[-20%] left-0 z-[-1] h-[570px] w-[570px]"
+        distance={[5100, 5250]}
+      />
       <div className="min-h-[760px] w-full px-[60px] py-20 pb-[160px] max-md:px-6 max-sm:py-14">
         <div className="relative flex h-full w-full items-center rounded-[80px] bg-[#AACFFE] max-md:flex-col max-md:rounded-[30px]">
           <ContactUsInfoContainer>

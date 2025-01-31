@@ -16,7 +16,6 @@ export default function ExploreAI() {
               right spot."
           />
         </GoTopAnimation>
-
         <GoTopAnimation idx={0} startNumber={0}>
           <div className="grid grid-cols-[repeat(auto-fill_,minmax(330px,1fr))] gap-[22px] max-sm:grid-cols-[repeat(auto-fill_,minmax(300px,1fr))]">
             {ExploreAIData.map((el, idx) => (

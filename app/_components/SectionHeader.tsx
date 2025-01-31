@@ -17,7 +17,7 @@ export default function SectionHeader({
         <p className="text-nowrap text-[clamp(30px,5vw,40px)] font-semibold">
           {title}
         </p>
-        <p className="text-[clamp(14px,3vw,16px)] text-[#ffffffcc] max-md:w-[85%]">
+        <p className="w-[60%] text-[clamp(14px,3vw,16px)] text-[#ffffffcc] max-md:w-[85%]">
           {paragraph}
         </p>
       </div>

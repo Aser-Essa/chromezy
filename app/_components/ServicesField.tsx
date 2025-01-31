@@ -12,7 +12,7 @@ type TechnologyFieldProps = {
   idx: number;
 };
 
-export default function TechnologyField({
+export default function ServicesField({
   title,
   Services,
   idx,

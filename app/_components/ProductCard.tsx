@@ -1,13 +1,18 @@
 import { FiArrowUpRight } from "react-icons/fi";
 
-type CardProps = {
+type ProductCardProps = {
   image: React.ReactElement;
   title: string;
   description: string;
   backgroundColor: string;
 };
 
-function Card({ title, description, backgroundColor, image }: CardProps) {
+function ProductCard({
+  title,
+  description,
+  backgroundColor,
+  image,
+}: ProductCardProps) {
   return (
     <>
       <div
@@ -38,4 +43,4 @@ function Card({ title, description, backgroundColor, image }: CardProps) {
   );
 }
 
-export default Card;
+export default ProductCard;
