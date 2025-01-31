@@ -5,10 +5,12 @@ import ClientComment from "../_components/ClientComment";
 import { motion, useAnimation } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { ClientsData } from "../_lib/Data";
+import SectionHeader from "../_components/SectionHeader";
 
 function ClientsComments() {
+  const [windowWidth, setWindowWidth] = useState(0);
   const controls = useAnimation();
-  const [swipe, setSwipe] = useState(0);
+  const [swipe, setSwipe] = useState(-200);
   const [swipeCount, setSwipeCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const commentRef = useRef<HTMLDivElement>(null);
@@ -37,18 +39,30 @@ function ClientsComments() {
     });
   }, [controls, swipe]);
 
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+    return window.removeEventListener("resize", () =>
+      setWindowWidth(window.innerWidth),
+    );
+  }, []);
+
+  useEffect(() => {
+    setSwipe(0);
+  }, []);
+
   return (
     <>
-      <div className="space-y-12 p-20 max-md:px-6 max-sm:space-y-10 max-sm:py-14">
+      <div
+        className="space-y-12 p-20 max-md:px-6 max-sm:space-y-10 max-sm:py-14"
+        id="ExploreAI"
+      >
         <div className="flex h-[90px] items-center justify-between">
-          <div className="space-y-4">
-            <p className="text-[clamp(30px,5vw,40px)] font-semibold">
-              Our Happy Clients
-            </p>
-            <p className="text-[clamp(14px,3vw,16px)] text-[#ffffffcc]">
-              Dummy ipsum dolor sit amet, consectetur adipiscing elit
-            </p>
-          </div>
+          <SectionHeader
+            className="space-y-4"
+            title=" Our Happy Clients"
+            paragraph=" Dummy ipsum dolor sit amet, consectetur adipiscing elit"
+          />
           <div className="flex items-center max-sm:hidden">
             <button
               className="nextBtn m-2 flex h-10 w-10 items-center justify-center rounded-[50%] bg-[#40424C]"
@@ -68,7 +82,11 @@ function ClientsComments() {
           <div className="h-[450px] w-[100vw] overflow-hidden">
             <motion.div
               className="relative right-0 flex w-fit items-center gap-8"
+              initial={{ left: "-200px", opacity: 0 }}
+              whileInView={{ left: 0, opacity: 1 }}
               animate={controls}
+              transition={{ duration: 0.35, ease: "linear" }}
+              viewport={{ amount: windowWidth > 1024 ? 0.45 : 0 }}
               ref={ref}
               dir="ltr"
             >

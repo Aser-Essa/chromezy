@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const ServicesData = [
+export const ProductsData = [
   {
     title: "MVP",
     description:
@@ -19,7 +19,7 @@ export const ServicesData = [
   {
     title: "SaaS",
     description:
-      "Take your business to new heights with our all-inclusive SaaS development services, delivering seamless and digital experiences that are platform-agnostic and tailored to your customers' needs.",
+      "Take your business to new heights with our all-inclusive SaaS development , delivering seamless and digital experiences that are platform-agnostic and tailored to your customers' needs.",
     backgroundColor: "#7E2148",
     image: (
       <Image
@@ -139,7 +139,7 @@ export const ClientsData = [
   },
 ];
 
-export const SuccessStoriesData = [
+export const BlogsData = [
   {
     title: "FinConnect",
     description: "Customer Relationship Management (CRM)",
@@ -203,10 +203,10 @@ export const SuccessStoriesData = [
   },
 ];
 
-export const TechnologiesData = [
+export const ServicesData = [
   {
     title: "Web App Development",
-    technologies: [
+    Services: [
       {
         text: "React",
         image: "React.png",
@@ -242,7 +242,7 @@ export const TechnologiesData = [
   },
   {
     title: "Mobile App Development",
-    technologies: [
+    Services: [
       {
         text: "Flutter",
         image: "Flutter.png",
@@ -271,7 +271,7 @@ export const TechnologiesData = [
   },
   {
     title: "E-commerce",
-    technologies: [
+    Services: [
       {
         text: "Shopify",
       },
@@ -285,7 +285,7 @@ export const TechnologiesData = [
   },
   {
     title: "Analytics",
-    technologies: [
+    Services: [
       {
         text: "Python",
         image: "Python.png",
@@ -309,7 +309,7 @@ export const TechnologiesData = [
   },
   {
     title: "Data & Cloud",
-    technologies: [
+    Services: [
       {
         text: "Azure",
         image: "Azure.png",
@@ -337,7 +337,7 @@ export const TechnologiesData = [
   },
 ];
 
-export const InsightsData = [
+export const ExploreAIData = [
   {
     title: "Successful MVP Launches That Changed the Game.",
     description: `Discover the secrets behind game-changing MVP launches! From lean
@@ -348,7 +348,7 @@ export const InsightsData = [
   },
   {
     title: "How Our AI Product Development Company is Pioneering Innovation?",
-    description: `Discover how our product development company pioneers innovation. From groundbreaking technologies to creative strategies, we're shaping the future. Click to explore our journey and join us in revolutionizing industries.`,
+    description: `Discover how our product development company pioneers innovation. From groundbreaking Services to creative strategies, we're shaping the future. Click to explore our journey and join us in revolutionizing industries.`,
     image: "insigts2.png",
   },
 

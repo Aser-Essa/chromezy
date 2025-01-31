@@ -11,12 +11,14 @@ function ScrollTriangleImage() {
   const [widthScroll, setWidthScroll] = useState([669, 409]);
   const [heightDistance, setHeightDistance] = useState([669, 409]);
   const [blurState, setBlurState] = useState([10, 5]);
+  const [opacityState, setOpacityState] = useState([1, 1]);
 
   const top = useTransform(scrollY, distance, topDistance);
   const left = useTransform(scrollY, distance, leftDistance);
   const width = useTransform(scrollY, distance, widthScroll);
   const height = useTransform(scrollY, distance, heightDistance);
   const blur = useTransform(scrollY, distance, blurState);
+  const opacity = useTransform(scrollY, distance, opacityState);
 
   function handleScroll(e: number) {
     if (e <= 731) {
@@ -26,6 +28,7 @@ function ScrollTriangleImage() {
       setWidthScroll([669, 409]);
       setHeightDistance([669, 409]);
       setBlurState([10, 5]);
+      setOpacityState([1, 1]);
     }
     if (1123 >= e && e >= 731) {
       setDistance([751, 1123]);
@@ -34,6 +37,7 @@ function ScrollTriangleImage() {
       setWidthScroll([409, 191]);
       setHeightDistance([409, 191]);
       setBlurState([5, 14]);
+      setOpacityState([1, 1]);
     }
     if (1887 >= e && e >= 1123) {
       setDistance([1143, 1887]);
@@ -42,6 +46,7 @@ function ScrollTriangleImage() {
       setHeightDistance([191, 434]);
       setLeftDistance([-45, -115]);
       setBlurState([14, 7]);
+      setOpacityState([1, 1]);
     }
 
     if (2651 >= e && e >= 1887) {
@@ -51,6 +56,17 @@ function ScrollTriangleImage() {
       setWidthScroll([434, 816]);
       setHeightDistance([434, 816]);
       setBlurState([7, 14]);
+      setOpacityState([1, 1]);
+    }
+
+    if (3515 >= e && e >= 2651) {
+      setDistance([2615, 3400]);
+      setTopDistance([2640, 3400]);
+      setLeftDistance([-450, -450]);
+      setWidthScroll([816, 816]);
+      setHeightDistance([816, 816]);
+      setBlurState([14, 14]);
+      setOpacityState([1, 0]);
     }
   }
 
@@ -65,6 +81,7 @@ function ScrollTriangleImage() {
         width,
         height,
         filter: `blur(${blur.get()}px)`,
+        opacity,
       }}
     >
       <Image

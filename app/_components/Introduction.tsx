@@ -1,10 +1,22 @@
+"use client";
 import Image from "next/image";
 import GridText from "./GridText";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useState } from "react";
 
 function Introduction() {
+  const { scrollY } = useScroll();
+  const [gapWidth, setgapWidth] = useState(48);
+  scrollY.on("change", () => setgapWidth(gap.get()));
+
+  const gap = useTransform(scrollY, [0, 650], [48, 0]);
+
   return (
     <>
-      <div className="relative z-[1000] mt-[110px] flex min-h-[597px] w-full flex-col items-center gap-12 px-20 text-center max-md:gap-10 max-md:px-14 max-sm:px-6">
+      <motion.div
+        className="relative z-[1000] mt-[110px] flex min-h-[597px] w-full flex-col items-center px-20 text-center max-md:px-14 max-sm:px-6"
+        style={{ gap: `${gapWidth}px` }}
+      >
         <div className="flex flex-col items-center gap-3">
           <div className="flex h-[56px] items-center justify-center gap-2.5 py-4">
             <Image
@@ -50,7 +62,7 @@ function Introduction() {
             <p className="text-sm">Active Users</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

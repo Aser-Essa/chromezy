@@ -2,21 +2,21 @@ import Ads from "./_components/Ads";
 import ClientsComments from "./sections/ClientsComments";
 import ContactUs from "./sections/ContactUs";
 import HeroSection from "./sections/HeroSection";
-import Insights from "./sections/Insights";
+import ExploreAI from "./sections/ExploreAI";
+import Products from "./sections/Products";
+import Blogs from "./sections/Blogs";
 import Services from "./sections/Services";
-import SuccessStories from "./sections/SuccessStories";
-import Technologies from "./sections/Technologies";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
       <Ads />
-      <Services />
+      <Products />
       <ClientsComments />
-      <SuccessStories />
-      <Technologies />
-      <Insights />
+      <Blogs />
+      <Services />
+      <ExploreAI />
       <ContactUs />
     </div>
   );

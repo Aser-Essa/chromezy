@@ -15,7 +15,7 @@ export default function InsightCard({
 }: InsightCardProps) {
   return (
     <>
-      <div className="space-y-3 rounded-[20px] bg-[#00000033] p-5 pb-8">
+      <div className="space-y-3 rounded-[20px] bg-[#00000033] p-5 pb-8 backdrop-blur-[20px]">
         <div className="relative mb-2 h-[220px] w-full overflow-hidden rounded-lg">
           <Image
             src={`/${image}`}

@@ -1,45 +1,64 @@
-import Card from "../_components/Card";
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import TechnologyField from "../_components/TechnologyField";
 import { ServicesData } from "../_lib/Data";
-import HiddenTopAnimation from "../_components/HiddenTopAnimation";
-import BlurBallAnimation from "../_components/BlurBallAnimation";
+import GoTopAnimation from "../_components/GoTopAnimation";
+import { motion, useScroll, useTransform } from "motion/react";
 
-function Services() {
+export default function Services() {
+  const { scrollY } = useScroll();
+  const [gapWidth, setgapWidth] = useState(40);
+  const [paddingBlockoffset, setpaddingBlockOffset] = useState(120);
+
+  const gap = useTransform(scrollY, [3500, 4250], [40, 0]);
+  const paddingBlock = useTransform(scrollY, [3500, 4250], [120, 10]);
+  const height = useTransform(scrollY, [3500, 4250], [859, 550]);
+  const opacity = useTransform(scrollY, [3500, 4250], [1, 0.35]);
+
+  function handleRefreshValues() {
+    setgapWidth(gap.get());
+    setpaddingBlockOffset(paddingBlock.get());
+  }
+
+  scrollY.on("change", handleRefreshValues);
+
   return (
-    <HiddenTopAnimation distance={[1200, 1750]} maxScreen={1300}>
-      <div
-        className="absolute left-[50%] h-[445px] w-[445px] translate-x-[-50%] blur-[100px] max-md:h-full max-md:w-full"
-        style={{
-          background:
-            "radial-gradient( circle, #095dff 0%, #bd09ff3e 30%, #bd09ff00 80%)",
-        }}
-      ></div>
-      <div className="relative space-y-12 p-20 max-md:px-6 max-md:py-10">
-        <BlurBallAnimation />
-        <div className="space-y-4">
-          <p className="text-[40px] font-semibold max-sm:text-[30px]">
-            Product Engineering
-          </p>
-          <p className="max-w-[674px] text-[#ffffffcc] max-sm:text-sm">
-            Discover the impact of bespoke digital solutions tailored precisely
-            to your business&apos;s distinct requirements. Our experienced team
-            of professionals ensures you receive outstanding results that
-            consistently exceed your expectations.
-          </p>
+    <div className="flex flex-wrap items-center gap-20 px-20 py-[60px] max-[1050px]:gap-10 max-lg:gap-20 max-md:px-6 max-sm:py-14">
+      <motion.div
+        className="w-[40%] overflow-hidden rounded-[80px] bg-gradient-to-b from-[#282e6c33] to-[#bdd5f433] px-10 backdrop-blur-[30px] max-lg:h-[500px] max-lg:w-full max-lg:p-10 max-md:rounded-[30px]"
+        style={{ height, paddingBlock: `${paddingBlockoffset}px`, opacity }}
+      >
+        <p className="w-[85%] text-[clamp(24px,3vw,40px)] font-semibold max-sm:w-full">
+          Innovative Services Keeping Us Ahead
+        </p>
+        <p className="mt-5 text-[#ffffffcc]">
+          Discover the impact of bespoke digital solutions tailored precisely to
+          your business&apos;s distinct requirements.
+        </p>
+        <div className="relative aspect-square w-[clamp(200px,25vw,376px)] max-lg:mx-auto">
+          <Image
+            src={"/colored circle.png"}
+            fill
+            alt="colored circle"
+            className="mix-blend-exclusion"
+          />
         </div>
-        <div className="grid grid-cols-[repeat(auto-fill,_minmax(308px,1fr))] gap-4 max-md:gap-6">
-          {ServicesData?.map((card, idx) => (
-            <Card
-              key={idx}
-              title={card.title}
-              description={card.description}
-              image={card.image}
-              backgroundColor={card.backgroundColor}
+      </motion.div>
+      <motion.div
+        className="flex w-[51%] flex-col gap-10 max-lg:w-full"
+        style={{ gap: gapWidth }}
+      >
+        {ServicesData.map((tech, idx) => (
+          <GoTopAnimation key={idx} idx={idx} startNumber={0}>
+            <TechnologyField
+              title={tech.title}
+              Services={tech.Services}
+              idx={idx + 1}
             />
-          ))}
-        </div>
-      </div>
-    </HiddenTopAnimation>
+          </GoTopAnimation>
+        ))}
+      </motion.div>
+    </div>
   );
 }
-
-export default Services;
