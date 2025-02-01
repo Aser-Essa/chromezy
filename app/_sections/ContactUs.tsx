@@ -8,7 +8,7 @@ import ContactUsInfo from "../_components/ContactUsInfo";
 
 export default function ContactUs() {
   return (
-    <div className="relative">
+    <div className="relative scroll-mt-[350px]" id="ContactUS">
       <VioletLight
         className="bottom-[-20%] left-0 z-[-1] h-[570px] w-[570px]"
         distance={[5100, 5250]}

@@ -9,7 +9,7 @@ export default function HeaderBtns() {
           About Us
         </Link>
         <Link
-          href={""}
+          href={"#ContactUS"}
           className="h-full w-[115px] text-nowrap rounded-[100px] bg-[#4380FF] px-5 py-2.5 text-sm font-medium max-lg:w-fit max-lg:px-2.5 max-lg:text-xs"
         >
           Contact Us
