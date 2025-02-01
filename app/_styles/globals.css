@@ -12,6 +12,21 @@ body {
   width: 100%;
 }
 
+.active {
+  position: relative;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  z-index: -1;
+  background: linear-gradient(to right, #11deff, #4380ff);
+}
+
 @media (max-width: 640px) {
   .lights {
     opacity: 0.6 !important;

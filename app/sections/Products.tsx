@@ -12,7 +12,10 @@ function Products() {
         className="left-[50%] h-[445px] w-[445px] translate-x-[-50%]"
         distance={[700, 800]}
       />
-      <div className="relative space-y-12 p-20 max-md:px-6 max-md:py-10">
+      <div
+        className="relative space-y-12 p-20 max-md:px-6 max-md:py-10"
+        id="Products"
+      >
         <BlurBallAnimation />
         <GoTopAnimation idx={0} startNumber={0}>
           <SectionHeader

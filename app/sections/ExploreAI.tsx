@@ -7,7 +7,10 @@ import SectionHeader from "../_components/SectionHeader";
 export default function ExploreAI() {
   return (
     <>
-      <div className="space-y-12 p-20 max-md:px-6 max-sm:py-14">
+      <div
+        className="scroll-mt-[300px] space-y-12 p-20 max-md:px-6 max-sm:py-14"
+        id="ExploreAI"
+      >
         <GoTopAnimation idx={1} startNumber={0}>
           <SectionHeader
             className="space-y-2"

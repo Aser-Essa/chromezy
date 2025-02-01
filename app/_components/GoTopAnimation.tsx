@@ -22,7 +22,7 @@ export default function GoTopAnimation({
         initial={{ top: idx >= startNumber ? "50px" : "", opacity: 0 }}
         whileInView={{ top: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay }}
-        viewport={{ amount: 0.2 }}
+        viewport={{ amount: 0.15 }}
       >
         {children}
       </motion.div>

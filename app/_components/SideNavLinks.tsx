@@ -35,6 +35,10 @@ function SideNavLinks() {
     }
   };
 
+  function handleclickNav() {
+    handleClose();
+  }
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
@@ -88,29 +92,65 @@ function SideNavLinks() {
               />
             </div>
             <ul className="font-inter text-sm font-medium text-[#ffffff99]">
-              <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
-                <p>Home</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={"#Home"}
+                  className="flex items-center justify-between border-b border-[#ffffff0d] py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>Home</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
-              <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
-                <p>Explore AI</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={"#ExploreAI"}
+                  className="flex items-center justify-between border-b border-[#ffffff0d] py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>Explore AI</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
-              <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
-                <p>Services</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={"#Services"}
+                  className="flex items-center justify-between border-b border-[#ffffff0d] py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>Services</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
-              <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
-                <p>E-commerce</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={""}
+                  className="flex items-center justify-between border-b border-[#ffffff0d] py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>E-commerce</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
-              <li className="flex items-center justify-between border-b border-[#ffffff0d] py-4">
-                <p>Products</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={"#Products"}
+                  className="flex items-center justify-between border-b border-[#ffffff0d] py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>Products</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
-              <li className="flex items-center justify-between py-4">
-                <p>Blogs</p>
-                <IoIosArrowForward className="h-4 w-4" />
+              <li>
+                <Link
+                  href={"#Blogs"}
+                  className="flex items-center justify-between py-4"
+                  onClick={handleclickNav}
+                >
+                  <p>Blogs</p>
+                  <IoIosArrowForward className="h-4 w-4" />
+                </Link>
               </li>
             </ul>
             <div className="absolute bottom-6 flex items-center gap-4">
