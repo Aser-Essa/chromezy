@@ -8,7 +8,6 @@ function NavLinks() {
   function handleclickNav(nav: string) {
     setHash(nav);
   }
-  console.log(window.location.hash?.slice(1));
 
   return (
     <ul className="flex h-full items-center gap-8 border-b border-[#ffffff1a] px-4 font-inter text-xs font-medium max-[1140px]:gap-6 max-[870px]:gap-4 max-[810px]:gap-3 max-md:hidden max-sm:hidden">
