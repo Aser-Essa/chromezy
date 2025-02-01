@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function CopyWrites() {
@@ -17,24 +18,39 @@ export default function CopyWrites() {
         <div className="flex items-center gap-8">
           <p>Connect with us:</p>
           <div className="flex items-center gap-4">
-            <Image
-              src={"/facebook.png"}
-              width={24}
-              height={24}
-              alt="facebook"
-            />
-            <Image
-              src={"/instagram.png"}
-              width={24}
-              height={24}
-              alt="instagram"
-            />
-            <Image
-              src={"/linkedin.png"}
-              width={24}
-              height={24}
-              alt="linkedin"
-            />
+            <Link
+              href={"https://www.facebook.com/profile.php?id=100004553357437"}
+              target="_blank"
+            >
+              <Image
+                src={"/facebook.png"}
+                width={24}
+                height={24}
+                alt="facebook"
+              />
+            </Link>
+            <Link
+              href={"https://www.instagram.com/asser_essa_/"}
+              target="_blank"
+            >
+              <Image
+                src={"/instagram.png"}
+                width={24}
+                height={24}
+                alt="instagram"
+              />
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/asser-essa-a03407341/"}
+              target="_blank"
+            >
+              <Image
+                src={"/linkedin.png"}
+                width={24}
+                height={24}
+                alt="linkedin"
+              />
+            </Link>
           </div>
         </div>
       </div>

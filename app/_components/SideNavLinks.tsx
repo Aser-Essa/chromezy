@@ -154,24 +154,39 @@ function SideNavLinks() {
               </li>
             </ul>
             <div className="absolute bottom-6 flex items-center gap-4">
-              <Image
-                src={"/facebook.png"}
-                width={30}
-                height={30}
-                alt="facebook"
-              />
-              <Image
-                src={"/instagram.png"}
-                width={30}
-                height={30}
-                alt="instagram"
-              />
-              <Image
-                src={"/linkedin.png"}
-                width={30}
-                height={30}
-                alt="linkedin"
-              />
+              <Link
+                href={"https://www.facebook.com/profile.php?id=100004553357437"}
+                target="_blank"
+              >
+                <Image
+                  src={"/facebook.png"}
+                  width={30}
+                  height={30}
+                  alt="facebook"
+                />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/asser_essa_/"}
+                target="_blank"
+              >
+                <Image
+                  src={"/instagram.png"}
+                  width={30}
+                  height={30}
+                  alt="instagram"
+                />
+              </Link>
+              <Link
+                href={"https://www.linkedin.com/in/asser-essa-a03407341/"}
+                target="_blank"
+              >
+                <Image
+                  src={"/linkedin.png"}
+                  width={30}
+                  height={30}
+                  alt="linkedin"
+                />
+              </Link>
             </div>
           </div>
         </div>
