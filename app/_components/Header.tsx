@@ -2,7 +2,6 @@ import NavLinks from "./NavLinks";
 import SideNavLinks from "./SideNavLinks";
 import SearchHeader from "./SearchHeader";
 import Logo from "./Logo";
-import HeaderBtns from "./HeaderBtns";
 
 function Header() {
   return (
@@ -12,7 +11,6 @@ function Header() {
         <SearchHeader />
         <SideNavLinks />
         <NavLinks />
-        <HeaderBtns />
       </div>
     </div>
   );
