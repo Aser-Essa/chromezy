@@ -33,7 +33,7 @@ function BackgroundHeroSection() {
         ></div>
 
         <div
-          className="absolute left-[-52px] top-[-129px] z-[-1] h-[291px] w-[291px] opacity-[80%] blur-[150px]"
+          className="absolute left-[-52px] top-[-129px] z-[-1] h-[291px] w-[291px] opacity-[80%] blur-[150px] max-sm:hidden"
           style={{
             background: "linear-gradient(to bottom, #1A00FF 100%)",
           }}
