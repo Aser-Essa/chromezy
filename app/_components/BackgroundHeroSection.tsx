@@ -7,7 +7,7 @@ function BackgroundHeroSection() {
   const opacity = useTransform(scrollY, [0, 750], [1, 0]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden max-sm:hidden">
       <motion.div style={{ opacity }} className="lights transition-all">
         <div className="absolute left-[50%] top-[65%] z-[-200] h-[600px] w-[240px] translate-x-[-50%] translate-y-[-50%] rotate-[70deg] blur-[30px] max-sm:h-[200px]">
           <Image src={"/flower3.png"} fill alt="flower" priority />
