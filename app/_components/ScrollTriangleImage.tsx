@@ -1,76 +1,22 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
 
-function ScrollTriangleImage() {
+export default function ScrollTriangleImage() {
   const { scrollY } = useScroll();
-  const [distance, setDistance] = useState([0, 731]);
-  const [topDistance, setTopDistance] = useState([138, 843]);
-  const [leftDistance, setLeftDistance] = useState([-390, -130]);
-  const [widthScroll, setWidthScroll] = useState([669, 409]);
-  const [heightDistance, setHeightDistance] = useState([669, 409]);
-  const [blurState, setBlurState] = useState([10, 5]);
-  const [opacityState, setOpacityState] = useState([1, 1]);
 
-  const top = useTransform(scrollY, distance, topDistance);
-  const left = useTransform(scrollY, distance, leftDistance);
-  const width = useTransform(scrollY, distance, widthScroll);
-  const height = useTransform(scrollY, distance, heightDistance);
-  const blur = useTransform(scrollY, distance, blurState);
-  const opacity = useTransform(scrollY, distance, opacityState);
+  const scrollRanges = [0, 731, 1123, 1887, 2651, 3515];
+  const topValues = [138, 843, 1300, 2200, 2640, 3400];
+  const leftValues = [-390, -130, -45, -115, -450, -450];
+  const sizeValues = [669, 409, 191, 434, 816, 816];
+  const blurValues = [10, 5, 14, 7, 14, 14];
+  const opacityValues = [1, 1, 1, 1, 1, 0];
 
-  function handleScroll(e: number) {
-    if (e <= 731) {
-      setDistance([0, 731]);
-      setTopDistance([138, 843]);
-      setLeftDistance([-390, -130]);
-      setWidthScroll([669, 409]);
-      setHeightDistance([669, 409]);
-      setBlurState([10, 5]);
-      setOpacityState([1, 1]);
-    }
-    if (1123 >= e && e >= 731) {
-      setDistance([751, 1123]);
-      setTopDistance([843, 1300]);
-      setLeftDistance([-130, -45]);
-      setWidthScroll([409, 191]);
-      setHeightDistance([409, 191]);
-      setBlurState([5, 14]);
-      setOpacityState([1, 1]);
-    }
-    if (1887 >= e && e >= 1123) {
-      setDistance([1143, 1887]);
-      setTopDistance([1300, 2200]);
-      setWidthScroll([191, 434]);
-      setHeightDistance([191, 434]);
-      setLeftDistance([-45, -115]);
-      setBlurState([14, 7]);
-      setOpacityState([1, 1]);
-    }
-
-    if (2651 >= e && e >= 1887) {
-      setDistance([1947, 2630]);
-      setTopDistance([2200, 2640]);
-      setLeftDistance([-115, -450]);
-      setWidthScroll([434, 816]);
-      setHeightDistance([434, 816]);
-      setBlurState([7, 14]);
-      setOpacityState([1, 1]);
-    }
-
-    if (3515 >= e && e >= 2651) {
-      setDistance([2615, 3400]);
-      setTopDistance([2640, 3400]);
-      setLeftDistance([-450, -450]);
-      setWidthScroll([816, 816]);
-      setHeightDistance([816, 816]);
-      setBlurState([14, 14]);
-      setOpacityState([1, 0]);
-    }
-  }
-
-  scrollY.on("change", handleScroll);
+  const top = useTransform(scrollY, scrollRanges, topValues);
+  const left = useTransform(scrollY, scrollRanges, leftValues);
+  const size = useTransform(scrollY, scrollRanges, sizeValues);
+  const blur = useTransform(scrollY, scrollRanges, blurValues);
+  const opacity = useTransform(scrollY, scrollRanges, opacityValues);
 
   return (
     <motion.div
@@ -78,14 +24,14 @@ function ScrollTriangleImage() {
       style={{
         top,
         left,
-        width,
-        height,
-        filter: `blur(${blur.get()}px)`,
+        width: size,
+        height: size,
+        filter: useTransform(blur, (b) => `blur(${b}px)`),
         opacity,
       }}
     >
       <Image
-        src={"/Triangle.png"}
+        src="/Triangle.png"
         fill
         alt="triangle"
         priority
@@ -94,5 +40,3 @@ function ScrollTriangleImage() {
     </motion.div>
   );
 }
-
-export default ScrollTriangleImage;
